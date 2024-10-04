@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+input[type="checkbox"].peer:checked + .toggle-bg {
+  background-color: #3b82f6; 
+}
+
+
+.toggle-circle {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+input[type="checkbox"].peer:checked + .toggle-bg + .toggle-circle {
+  transform: translateX(2px); 
+}
+
+input[type="checkbox"].peer:focus + .toggle-bg {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); 
+}
