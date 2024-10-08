@@ -117,7 +117,9 @@ const SignUpPage = () => {
           <img
             className="back"
             src="https://th.bing.com/th/id/OIP.slRSxnXOr6TVHBcRRpVFeAHaEK?w=286&h=180&c=7&r=0&o=5&pid=1.7"
+          // eslint-disable-next-line 
             alt="Second Image"
+         
           />
         </div>
       </div>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,4 +51,80 @@ input[type="checkbox"].peer:checked + .toggle-bg + .toggle-circle {
 
 input[type="checkbox"].peer:focus + .toggle-bg {
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); 
+}
+
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 100%;
+  }
+}
+
+.animate-gradient-text {
+  background-size: 200% 200%;
+  background-image: linear-gradient(270deg, #4c51bf, #d53f8c, #e53e3e);
+  animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in 1s ease forwards;
+}
+@keyframes animatedBorderGreen {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: green;
+  }
+  75% {
+    border-color: blue;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+@keyframes animatedBorderRed {
+  0% {
+      border-color: blue;
+  }
+  25% {
+      border-color: green;
+  }
+  50% {
+      border-color: yellow;
+  }
+  75% {
+      border-color: red;
+  }
+  100% {
+      border-color: blue;
+  }
+}
+
+.animated-border-red {
+  animation: animatedBorderRed 4s linear infinite; /* Adjust duration as needed */
+  border-width: 4px; /* Ensure border width is set */
+  border-style: solid; /* Set border style */
+}
+
+.animated-border-green {
+  animation: animatedBorderGreen 4s linear infinite;
 }
